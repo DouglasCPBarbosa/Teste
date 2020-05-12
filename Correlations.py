@@ -7,6 +7,7 @@ Created on Sun Nov 18 13:00:08 2018
 
 import numpy as np
 import pandas as pd
+import matplotlib
 
 dataset = pd.read_excel('BD - RealZin_2Classes.xlsx')
 X = dataset.iloc[:,:1001].values
@@ -40,7 +41,7 @@ for i in range(menor, maior):
     Corr_Max.append(max(linha))
     Ind_Max.append(np.argmax(linha)+menor)
 
-
+print("Apenas para dar erro")
     
 
 
