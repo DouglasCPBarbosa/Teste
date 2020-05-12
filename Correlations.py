@@ -7,6 +7,7 @@ Created on Sun Nov 18 13:00:08 2018
 
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt #Incluido pra conflito
 
 dataset = pd.read_excel('BD - RealZin_2Classes.xlsx')
 X = dataset.iloc[:,:1001].values
@@ -32,7 +33,7 @@ for i in range(menor, maior):
         b = X[j]
         corr = np.corrcoef(a, b)
         linha.append(corr[0][1])
-#    print(linha)
+#ALTERADO AQUI (DELETE)
     Correlations.append(linha[:])
     Corr_Min.append(min(linha))
     Ind_Min.append(np.argmin(linha)+menor)
